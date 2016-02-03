@@ -47,6 +47,17 @@ practice using them than because it was the easiest thing to do. You
 can't use `auto` everwhere, it seems, but `std::function` fills the
 gaps.
 
+## [Day 4][4]
+
+Easily and swiftly done in Python. Slowly but correctly in `bash`
+
+    $ time ./day4.sh 
+    117946
+    
+    real	7m29.612s
+    user	2m46.140s
+    sys 	5m26.347s
+
 [1]: http://adventofcode.com/day/1
 [2]: http://adventofcode.com/day/2
 [3]: http://adventofcode.com/day/3
