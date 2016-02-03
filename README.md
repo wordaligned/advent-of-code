@@ -21,4 +21,38 @@ effects, and the shield spell takes effect when cast and when it
 expires. I also needed to prune the search space and game state to 
 find the result.
 
+
+## [Day 1][1]
+
+All those parentheses suggest lisp for a solution, but I went for
+`bash` and `awk`. The input is all on one line which doesn't work well
+with awk. Here's how to work around that:
+
+    while read -n 1 c ; do echo $c; done
+
+[1]: http://adventofcode.com/day/1
+[2]: http://adventofcode.com/day/2
+[3]: http://adventofcode.com/day/3
+[4]: http://adventofcode.com/day/4
+[5]: http://adventofcode.com/day/5
+[6]: http://adventofcode.com/day/6
+[7]: http://adventofcode.com/day/7
+[8]: http://adventofcode.com/day/8
+[9]: http://adventofcode.com/day/9
+[10]: http://adventofcode.com/day/10
+[11]: http://adventofcode.com/day/11
+[12]: http://adventofcode.com/day/12
+[13]: http://adventofcode.com/day/13
+[14]: http://adventofcode.com/day/14
+[15]: http://adventofcode.com/day/15
+[16]: http://adventofcode.com/day/16
+[17]: http://adventofcode.com/day/17
+[18]: http://adventofcode.com/day/18
+[19]: http://adventofcode.com/day/19
+[20]: http://adventofcode.com/day/20
+[21]: http://adventofcode.com/day/21
 [22]: http://adventofcode.com/day/22
+[23]: http://adventofcode.com/day/23
+[24]: http://adventofcode.com/day/24
+[25]: http://adventofcode.com/day/25
+
