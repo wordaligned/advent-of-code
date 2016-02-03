@@ -30,6 +30,10 @@ with awk. Here's how to work around that:
 
     while read -n 1 c ; do echo $c; done
 
+## [Day 2][2]
+
+Awk again. Much as I like `awk` I almost never use it, and attempting this simple question reminded me why. Why isn't `min` a builtin function, for example?
+
 [1]: http://adventofcode.com/day/1
 [2]: http://adventofcode.com/day/2
 [3]: http://adventofcode.com/day/3
