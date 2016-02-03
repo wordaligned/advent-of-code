@@ -32,7 +32,15 @@ with awk. Here's how to work around that:
 
 ## [Day 2][2]
 
-Awk again. Much as I like `awk` I almost never use it, and attempting this simple question reminded me why. Why isn't `min` a builtin function, for example?
+Awk again. Much as I like `awk` I almost never use it, and attempting
+this simple question reminded me why. Why isn't `min` a builtin
+function, for example?
+
+## [Day 3][3]
+
+I wrote a C++ solution system tested using the supplied
+examples. C++14 is more convenient for handling coordinate pairs
+than C++98 was. I find it easier to write C++ than `bash`.
 
 [1]: http://adventofcode.com/day/1
 [2]: http://adventofcode.com/day/2
