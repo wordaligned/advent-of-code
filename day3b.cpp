@@ -6,7 +6,7 @@
 
 typedef std::pair<int, int> point;
 
-point move(char c, int & x, int & y) {
+point step(char c, int & x, int & y) {
     switch (c) {
     case '>': return {++x, y};
     case '<': return {--x, y};
@@ -25,8 +25,8 @@ int main() {
     std::set<point> visited = {{x, y}, {u, v}};
 
     std::function<point(char)> santas[] = {
-        [&](char c) { return move(c, x, y); },
-        [&](char c) { return move(c, u, v); }
+        [&](char c) { return step(c, x, y); },
+        [&](char c) { return step(c, u, v); }
     };
 
     int turn = 0;
