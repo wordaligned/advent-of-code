@@ -42,6 +42,10 @@ I wrote a C++ solution system tested using the supplied
 examples. C++14 is more convenient for handling coordinate pairs
 than C++98 was. I find it easier to write C++ than `bash`.
 
+I used lambdas for the second part, more to practice using them than
+because it was the easiest thing to do. You can't use `auto` everwhere,
+it seems, but `std::function` fills the gaps.
+
 [1]: http://adventofcode.com/day/1
 [2]: http://adventofcode.com/day/2
 [3]: http://adventofcode.com/day/3
