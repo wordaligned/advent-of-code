@@ -65,11 +65,21 @@ Easily and swiftly done in Python. Slowly but correctly in `bash`
 
 ## [Day 5][5]
 
-This [bash script](./day5.sh) filters out the naughty lines using
+This [bash script](./day5.sh) filters out the naughty strings using
 `grep`, `tr` and `bash` builtins. Pipe its output through `wc -l` to
-get the number of nice strings.
+get the number of nice strings:
 
     ./day5.sh < input5 | wc -l
+
+The second part of the puzzle just needs `grep`. Filter the nice
+strings like this:
+
+     grep -E "(..).*\1" | grep -E "(.).\1"
+
+or count them:
+
+     grep -E "(..).*\1" | grep -Ec "(.).\1"
+
 
 [1]: http://adventofcode.com/day/1
 [2]: http://adventofcode.com/day/2
