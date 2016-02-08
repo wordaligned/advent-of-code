@@ -11,6 +11,11 @@ appropriate for an expert who wants to stay sharp as they are for a
 beginner who is just learning to code. Each puzzle calls upon
 different skills and has two parts that build on a theme.
 
+First time through, I solved all the puzzles using Python, leaning on
+its standard containers, [algorithms][itertools] and text processing
+powers. Now I'm returning to the puzzles and exploring alternative
+solutions, for the practice.
+
 ## [Day 22][22]
 
 This is the puzzle I finished last. I had trouble understanding the
@@ -58,6 +63,14 @@ Easily and swiftly done in Python. Slowly but correctly in `bash`
     user	2m46.140s
     sys 	5m26.347s
 
+## [Day 5][5]
+
+This [bash script](./day5.sh) filters out the naughty lines using
+`grep`, `tr` and `bash` builtins. Pipe its output through `wc -l` to
+get the number of nice strings.
+
+    ./day5.sh < input5 | wc -l
+
 [1]: http://adventofcode.com/day/1
 [2]: http://adventofcode.com/day/2
 [3]: http://adventofcode.com/day/3
@@ -84,3 +97,4 @@ Easily and swiftly done in Python. Slowly but correctly in `bash`
 [24]: http://adventofcode.com/day/24
 [25]: http://adventofcode.com/day/25
 
+[itertools]: https://docs.python.org/3/library/itertools.html
