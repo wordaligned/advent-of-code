@@ -80,6 +80,20 @@ or count them:
 
      grep -E "(..).*\1" | grep -Ec "(.).\1"
 
+## [Day 10][10]
+
+This is all about the looksay numbers. In Python, you can represent a
+number as a list of digits, then use [groupby][] and [chain][] to produce the
+next number.
+
+    from itertools import *
+    
+    def looksay(n):
+        flatten = chain.from_iterable
+        return list(flatten([len(list(g)), d] for d, g in groupby(n)))
+
+I wrote another [solution](./day10.go) in `go`, which doesn't offer
+these higher level algorithms. It looks rather like C code.
 
 [1]: http://adventofcode.com/day/1
 [2]: http://adventofcode.com/day/2
@@ -108,3 +122,5 @@ or count them:
 [25]: http://adventofcode.com/day/25
 
 [itertools]: https://docs.python.org/3/library/itertools.html
+[groupby]: https://docs.python.org/3/library/itertools.html#itertools.groupby
+[chain]: https://docs.python.org/3/library/itertools.html#itertools.chain.from_iterable
