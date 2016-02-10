@@ -95,6 +95,21 @@ next number.
 I wrote another [solution](./day10.go) in `go`, which doesn't offer
 these higher level algorithms. It looks rather like C code.
 
+## [Day 6][6]
+
+Awk works out nicely for this one, and I've learned a little more about the language. Arrays are, in fact, associative containers. In this case, we have a two dimensional grid of lights which are being switched on and off as specified in a list of instructions.
+
+    turn on 296,50 through 729,664
+    turn on 212,957 through 490,987
+    toggle 171,31 through 688,88
+    turn off 991,989 through 994,998
+
+We can pick out the numbers by setting the field separator, `NF`, to the regex pattern "[ ,]". We model the grid as an array, `lights`, accessing the light at `(x, y)` as:
+
+    lights[x,y]
+
+The syntax is nice, but what actually happens is that the indices, x and y, are concatenated with a subscript between them. Awk is highly dynamic. Scoping can be surprising. Variables come into being as needed and zero initialised. Split long lines using an escape character `\` -- parenthesising won't do.
+
 [1]: http://adventofcode.com/day/1
 [2]: http://adventofcode.com/day/2
 [3]: http://adventofcode.com/day/3
