@@ -1,2 +1,2 @@
 strings = open('input8').read().splitlines()
-print(len(eval('+'.join(strings))) - sum(map(len, strings)))
+print(sum(map(len, strings)) - len(eval('+'.join(strings))))
