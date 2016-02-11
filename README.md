@@ -97,18 +97,40 @@ these higher level algorithms. It looks rather like C code.
 
 ## [Day 6][6]
 
-Awk works out nicely for this one, and I've learned a little more about the language. Arrays are, in fact, associative containers. In this case, we have a two dimensional grid of lights which are being switched on and off as specified in a list of instructions.
+Awk works out nicely for this one, and I've learned a little more
+about the language. Arrays are, in fact, associative containers. In
+this case, we have a two dimensional grid of lights which are being
+switched on and off as specified in a list of instructions.
 
     turn on 296,50 through 729,664
     turn on 212,957 through 490,987
     toggle 171,31 through 688,88
     turn off 991,989 through 994,998
 
-We can pick out the numbers by setting the field separator, `NF`, to the regex pattern "[ ,]". We model the grid as an array, `lights`, accessing the light at `(x, y)` as:
+We can pick out the numbers by setting the field separator, `NF`, to
+the regex pattern "[ ,]". We model the grid as an array, `lights`,
+accessing the light at `(x, y)` as:
 
     lights[x,y]
 
-The syntax is nice, but what actually happens is that the indices, x and y, are concatenated with a subscript between them. Awk is highly dynamic. Scoping can be surprising. Variables come into being as needed and zero initialised. Split long lines using an escape character `\` -- parenthesising won't do.
+The syntax is nice, but what actually happens is that the indices, x
+and y, are concatenated with a subscript between them. Awk is highly
+dynamic. Scoping can be surprising. Variables come into being as
+needed and zero initialised. Split long lines using an escape
+character `\` -- parenthesising won't do.
+
+## [Day 8][8]
+
+An interesting puzzle. You can quickly and safely solve it using
+Python to [eval][] the string. By safely, I mean you'll get an
+exception thrown on malformed input.
+
+    strings = open('input8').read().splitlines()
+    print(len(eval('+'.join(strings))) - sum(map(len, strings)))
+
+My [alternative solution][./day8.go] written in Go is longer and more
+fiddly.
+
 
 [1]: http://adventofcode.com/day/1
 [2]: http://adventofcode.com/day/2
@@ -139,3 +161,4 @@ The syntax is nice, but what actually happens is that the indices, x and y, are 
 [itertools]: https://docs.python.org/3/library/itertools.html
 [groupby]: https://docs.python.org/3/library/itertools.html#itertools.groupby
 [chain]: https://docs.python.org/3/library/itertools.html#itertools.chain.from_iterable
+[eval]: https://docs.python.org/3/library/functions.html#eval
