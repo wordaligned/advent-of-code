@@ -114,7 +114,7 @@ accessing the light at `(x, y)` as:
     lights[x,y]
 
 The syntax is nice, but what actually happens is that the indices, x
-and y, are concatenated with a subscript between them. Awk is highly
+and y, are concatenated with a separator between them. Awk is highly
 dynamic. Scoping can be surprising. Variables come into being as
 needed and zero initialised. Split long lines using an escape
 character `\` -- parenthesising won't do.
@@ -128,7 +128,7 @@ exception thrown on malformed input.
     strings = open('input8').read().splitlines()
     print(len(eval('+'.join(strings))) - sum(map(len, strings)))
 
-My [alternative solution][./day8.go] written in Go is longer and more
+My [alternative solution](./day8.go) written in Go is longer and more
 fiddly.
 
 
