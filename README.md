@@ -131,6 +131,10 @@ exception thrown on malformed input.
 My [alternative solution](./day8.go) written in Go is longer and more
 fiddly.
 
+The second part of the puzzle is similar but different. Every `\` and
+`"` in the input needs escaping, requiring a single extra `\` in each
+case. In addition, two `"` characters are needed on every line. Bash,
+calling out to `wc` and `tr` can [do the arithmetic](./day8b.sh).
 
 [1]: http://adventofcode.com/day/1
 [2]: http://adventofcode.com/day/2
